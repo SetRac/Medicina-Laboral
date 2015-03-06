@@ -1817,13 +1817,13 @@
 </table>
 
 <table class="basic_table171">
-<td ><b>${ _('EMPRESA: ')}</b>  ${object.empresaantigua or "ninguna" }</td>
+<td ><b>${ _('EMPRESA: ')}</b>  ${object.empresaantigua.name or "ninguna" }</td>
 </table>
 
 
 <table class="basic_table172">
 		<td class="tdpeque12.5c2" ><b>${ _('CARGO: ')}</b>${object.cargo or "ninguno" } </td>
-		<td class="tdpeque3cm"><b>${ _('TIEMPO: ')}</b>  ${object.tiempoenempresa or "3" }${ _('meses')} </td>
+		<td class="tdpeque4cm"><b>${ _('TIEMPO: ')}</b>  ${object.tiempoenempresa or "3" }${ _('meses')} </td>
 
 </table>
 
@@ -1839,9 +1839,9 @@
 <table class="basic_table181">
 	 <tr>
 
-<td class="tdpeque1i13CM"><b>${ _('ACTIVIDAD FÍSICA ACTUAL:')}</b> ${object.cedula}</td>
-<td class="tdpeque4CM"><b>${ _('TABACO: ')}</b>${object.edad or "__" } </td>
-<td class="tdpeque4cM"><b>${ _('ALCOHOL: ')}</b>${object.edad or "__" } </td>
+<td class="tdpeque1i13CM"><b>${ _('ACTIVIDAD FÍSICA ACTUAL:')}</b> ${object.actividadfisica or "NO"}</td>
+<td class="tdpeque4CM"><b>${ _('TABACO: ')}</b>${object.tabaco or "NO" } </td>
+<td class="tdpeque4cM"><b>${ _('ALCOHOL: ')}</b>${object.alcohol or "NO" } </td>
          </tr>
 
 	 
@@ -1850,10 +1850,10 @@
 <table class="basic_table182">
 
 	 <tr>
-                <td class="tdpeque4.5c2"><b>${ _('CAFE: ')}</b>${object.papacondicion or "__" } </td>
-		<td class="tdpeque4.5c2"><b>${ _('MICCIONALES: ')}</b>${object.edad or "__" } </td>
-		<td class="tdpeque4.5c2"><b>${ _('INTESTINALES: ')}</b>${object.edad or "__" } </td>
-		<td class="tdpeque4.5c2"><b>${ _('OTROS: ')}</b>  ${object.edad or "__" } </td>
+                <td class="tdpeque4.5c2"><b>${ _('CAFE: ')}</b>${object.cafe or "NO"} </td>
+		<td class="tdpeque4.5c2"><b>${ _('MICCIONES: ')}</b>${object.micciones or "NO" } </td>
+		<td class="tdpeque4.5c2"><b>${ _('INTESTINALES: ')}</b>${object.Intestinales or "NO" } </td>
+		<td class="tdpeque4.5c2"><b>${ _('OTROS: ')}</b>  ${object.otroshabitos or "NO" } </td>
          </tr>
 
 </table>
@@ -1868,98 +1868,98 @@
 </table>
 <table class="basic_table191">
 <td class="mediaysi"><b>${ _('1) DOLORES DE CABEZA FRECUENTES ')}</b> </td>
-<td class="elsiono">${_("1")}  ${object.edad or "__" }</td>
+<td class="elsiono">${_("1")}  ${object.dolordecabeza or "NO" }</td>
 </table>
 <table class="basic_table192">
 <td class="mediaysi"><b>${ _('2) DIFICULTAD PARA VER CERCA, LEJOS O VISIÓN BORROSA')}</b> </td>
-<td class="elsiono">${_("2")}  ${object.edad or "__" }</td>
+<td class="elsiono">${_("2")}  ${object.dificultadparaver or "NO" }</td>
 </table>
 
 <table class="basic_table193">
 <td class="mediaysi"><b>${ _('3) USO DE LENTES CORRECTIVOS ')}</b> </td>
-<td class="elsiono">${_("3")}  ${object.edad or "__" }</td>
+<td class="elsiono">${_("3")}  ${object.usodelentes or "NO" }</td>
 </table>
 
 <table class="basic_table194">
 <td class="mediaysi"><b>${ _('4) DIFICULTAD PARA ESCUCHAR O ENTENDER LO QUE LE DICEN ')}</b> </td>
-<td class="elsiono"> ${_("4")} ${object.edad or "__" }</td>
+<td class="elsiono"> ${_("4")} ${object.escuchar or "NO" }</td>
 </table>
 
 <table class="basic_table195">
 <td class="mediaysi"><b>${ _('5) ASMA O DIFICULTAD PARA RESPIRAR')}</b> </td>
-<td class="elsiono"> ${_("5")} ${object.edad or "__" }</td>
+<td class="elsiono"> ${_("5")} ${object.asma or "NO" }</td>
 </table>
 
 <table class="basic_table196">
 <td class="mediaysi"><b>${ _('6) CANSANCIO AL CAMINAR ')}</b> </td>
-<td class="elsiono">${_("6")}  ${object.edad or "__" }</td>
+<td class="elsiono">${_("6")}  ${object.cansancio or "NO" }</td>
 </table>
 <table class="basic_table197">
 <td class="mediaysi"><b>${ _('7) DOLOR DE PECHO U OPRESIÓN')}</b> </td>
-<td class="elsiono">${_("7")}  ${object.edad or "__" }</td>
+<td class="elsiono">${_("7")}  ${object.opresion or "NO" }</td>
 </table>
 
 <table class="basic_table198">
 <td class="mediaysi"><b>${ _('8) HIPERTENCIÓN-HIPOTENSIÓN ARTERIAL ')}</b> </td>
-<td class="elsiono">${_("8")}  ${object.edad or "__" }</td>
+<td class="elsiono">${_("8")}  ${object.hipertension or "NO" }</td>
 </table>
 
 <table class="basic_table199">
 <td class="mediaysi"><b>${ _('9) DIARREA O ESTREÑIMIENTO ')}</b> </td>
-<td class="elsiono">${_("9")} ${object.edad or "__" }</td>
+<td class="elsiono">${_("9")} ${object.diarrea or "NO" }</td>
 </table>
 
 <table class="basic_table190">
 <td class="mediaysi"><b>${ _('10) PROBLEMAS PARA ORINAR')}</b> </td>
-<td class="elsiono"> ${_("10")}${object.edad or "__" }</td>
+<td class="elsiono"> ${_("10")}${object.problemasorinar or "NO" }</td>
 </table>
 
 <table class="basic_table1901">
 <td class="mediaysi"><b>${ _('11) LESIÓN O SECRECIÓN A NIVEL GENITAL ')}</b> </td>
-<td class="elsiono"> ${_("11")}${object.edad or "__" }</td>
+<td class="elsiono"> ${_("11")}${object.lesiongenital or "NO" }</td>
 </table>
 <table class="basic_table1902">
 <td class="mediaysi"><b>${ _('12) ENFERMEDAD DE TRANSMISIÓN SEXUAL')}</b> </td>
-<td class="elsiono"> ${_("12")}${object.edad or "__" }</td>
+<td class="elsiono"> ${_("12")}${object.enfermedadsexual or "NO" }</td>
 </table>
 
 <table class="basic_table1903">
 <td class="mediaysi"><b>${ _('13) DIFICULTAD PARA DORMIR O INSOMNIO')}</b> </td>
-<td class="elsiono">${_("13")} ${object.edad or "__" }</td>
+<td class="elsiono">${_("13")} ${object.insomnio or "NO" }</td>
 </table>
 
 <table class="basic_table1904">
 <td class="mediaysi"><b>${ _('14) AUMENTO O DISMINUCIÓN DE PESO EN EL ULTIMO AÑO ')}</b> </td>
-<td class="elsiono"> ${_("14")}${object.edad or "__" }</td>
+<td class="elsiono"> ${_("14")}${object.cambiodepeso or "NO" }</td>
 </table>
 
 <table class="basic_table1905">
 <td class="mediaysi"><b>${ _('15) DOLOR DE ESPALDA, CINTURA O ARTICULACIONES')}</b> </td>
-<td class="elsiono"> ${_("15")}${object.edad or "__" }</td>
+<td class="elsiono"> ${_("15")}${object.dolordeespalda or "NO" }</td>
 </table>
 
 <table class="basic_table1906">
 <td class="mediaysi"><b>${ _('16) FRACTURAS ESGUINCES, TRAUMATISMOS FUERTES, MUSCULO ESQUELETICOS, ATROPLLAMIENTOS ')}</b> </td>
-<td class="elsiono"> ${_("16")}${object.edad or "__" }</td>
+<td class="elsiono"> ${_("16")}${object.fracturas or "NO" }</td>
 </table>
 <table class="basic_table1907">
 <td class="mediaysi"><b>${ _('17) LESIONES MANCHAS EN LA PIEL. CICATRICES, TATUAJES, PIERCING')}</b> </td>
-<td class="elsiono"> ${_("17")}${object.edad or "__" }</td>
+<td class="elsiono"> ${_("17")}${object.lesionespiel or "NO" }</td>
 </table>
 
 <table class="basic_table1908">
 <td class="mediaysi"><b>${ _('18) TRABAJO POR TURNOS ')}</b> </td>
-<td class="elsiono"> ${_("18")}${object.edad or "__" }</td>
+<td class="elsiono"> ${_("18")}${object.trabajaporturnos or "NO" }</td>
 </table>
 
 <table class="basic_table1909">
 <td class="mediaysi"><b>${ _('19) USA LOS EQUIPOS DE PROTECCION PERSONAL ')}</b> </td>
-<td class="elsiono">${_("19")} ${object.edad or "__" }</td>
+<td class="elsiono">${_("19")} ${object.usaequiposproteccion or "NO" }</td>
 </table>
 
 <table class="basic_table1900">
 <td class="mediaysi"><b>${ _('20) HA SUFRIDO ALGÚN ACCIDENTE LABORAL.')}</b> </td>
-<td class="elsiono">${_("20")} ${object.edad or "__" }</td>
+<td class="elsiono">${_("20")} ${object.accidentelaboral or "NO" }</td>
 </table>
 
 
