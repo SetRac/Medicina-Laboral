@@ -189,6 +189,9 @@
 				
 				<page string="Examen Fisico">
 				  <!-- 		  Äbrir tercer Notebook   -->
+				    <separator string="Examen Fisico"/>
+				    <newline />
+
 				    <field name="peso"/>
 				    <field name="talla"/>
 				    <field name="fc"/>
@@ -196,6 +199,28 @@
 				    <field name="fr"/>
 				    <field name="ta"/>
 				    <field name="piel"/>
+				    <separator string="Cabeza Cuello"/>
+				    <newline />
+				    <field name="cabezacuello"/>
+				    <field name="orl"/>
+				    <field name="visioncercana"/>
+				    <field name="visionlejana"/>
+				    <field name="visiondecolore"/>
+				    <field name="visionborro"/>
+				    <field name="visionusalentes"/>
+				    <separator string="Torax"/>
+				    <newline />
+				    <field name="torax"/>
+				    <field name="toraxsimetrico"/>
+				    <field name="abdomen"/>
+				    <field name="herniasumbilicares"/>
+				    <field name="herniasinguinoescrotales"/>
+				    <field name="columnacervical"/>
+				    <field name="columnatoraxica"/>
+				    <field name="columnalumbosacra"/>
+				    <field name="miembrossuperiores"/>
+				    <field name="miembrosinferiores"/>
+				    <field name="neurologicos"/>
 				    
 				</page>
 

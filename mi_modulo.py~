@@ -178,11 +178,11 @@ class mi_modulo_mi_tabla(osv.osv):
         'hiv': fields.char('HIV',size=4 ,  help='Forma Almacenatmiento'),
 
 #Diagnostico
-        'elegible': fields.char('Componente',size=25 ,  help='Forma Almacenatmiento'),
-        'elegibleconlimitaciones': fields.char('Componente',size=12 ,  help='Forma Almacenatmiento'),
-        'noelegible': fields.char('Componente',size=15 ,  help='Forma Almacenatmiento'),
-        'sugerencias': fields.char('Componente',size=20 ,  help='Forma Almacenatmiento'),
-        'idx': fields.text('Componente',  help='Forma Almacenatmiento'),
+        'elegible': fields.char('elegible',size=25 ,  help='Forma Almacenatmiento'),
+        'elegibleconlimitaciones': fields.char('elegibleconlimitaciones',size=12 ,  help='Forma Almacenatmiento'),
+        'noelegible': fields.char('noelegible',size=15 ,  help='Forma Almacenatmiento'),
+        'sugerencias': fields.char('sugerencias',size=20 ,  help='Forma Almacenatmiento'),
+        'idx': fields.text('idx',  help='Forma Almacenatmiento'),
         
         #
         #prevacacional

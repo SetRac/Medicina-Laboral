@@ -1852,7 +1852,7 @@
 	 <tr>
                 <td class="tdpeque4.5c2"><b>${ _('CAFE: ')}</b>${object.cafe or "NO"} </td>
 		<td class="tdpeque4.5c2"><b>${ _('MICCIONES: ')}</b>${object.micciones or "NO" } </td>
-		<td class="tdpeque4.5c2"><b>${ _('INTESTINALES: ')}</b>${object.Intestinales or "NO" } </td>
+		<td class="tdpeque4.5c2"><b>${ _('INTESTINALES: ')}</b>${object.intestinales or "NO" } </td>
 		<td class="tdpeque4.5c2"><b>${ _('OTROS: ')}</b>  ${object.otroshabitos or "NO" } </td>
          </tr>
 
@@ -1968,58 +1968,70 @@
 <td  ><b>${ _('EXAMEN FÍSICO ')}</b> </td>
 </table>
 
+				    <field name="piel"/>
+
+
 <table class="basic_table201">
-<td style="tdpeque6.5c"><b>${ _('PESO: ')}</b> ${object.edad  }${ _('Kgs ')}</td>
-<td style="tdpeque5.5c"><b>${ _('TALLA: ')}</b> ${object.hermanoscondicion or 'SI' } ${ _(' mts')}</td>
-<td style="tdpeque6.5c"><b>${ _('FC: ')}</b> ${object.edad  } ${ _('lpm')}</td>
+<td style="tdpeque6.5c"><b>${ _('PESO: ')}</b> ${object.peso or "0" }${ _('Kgs ')}</td>
+<td style="tdpeque5.5c"><b>${ _('TALLA: ')}</b> ${object.talla  or "0"} ${ _(' mts')}</td>
+<td style="tdpeque6.5c"><b>${ _('FC: ')}</b> ${object.fc  or "0"} ${ _('lpm')}</td>
 </table>
 
 <table class="basic_table202">
-<td style="tdpeque6.5c"><b>${ _('PULSO: ')}</b> ${object.edad  }${ _('ppm ')}</td>
-<td style="tdpeque5.5c"><b>${ _('T.A.: ')}</b> ${object.hermanoscondicion or 'SI' } ${ _(' mm/Hg')}</td>
-<td style="tdpeque6.5c"><b>${ _('FR: ')}</b> ${object.edad  } ${ _('FR')}</td>
+<td style="tdpeque6.5c"><b>${ _('PULSO: ')}</b> ${object.pulso  }${ _('ppm ')}</td>
+<td style="tdpeque5.5c"><b>${ _('T.A.: ')}</b> ${object.ta or 'SI' } ${ _(' mm/Hg')}</td>
+<td style="tdpeque6.5c"><b>${ _('FR: ')}</b> ${object.fr  } ${ _('rpm')}</td>
 </table>
+
+<table class="basic_table20a">
+<td  ><b>${ _('PIEL ')}</b>  ${object.piel  } </td>
+</table>
+
 
 <table class="basic_table203">
 <td ><b>${ _('CABEZA Y CUELLO ')}</b> </td>
 </table>
 
-<table class="basic_table204">
+<table class="basic_table204a">
 <td ><b>${ _('Normocefalo; bien implantado sin puntos dolorosos ni reblandecimientos; simétrico; movilidad conservada; indoloro, ausencia de adenopatias. ')}</b> </td>
 </table>
 
+
 <table class="basic_table205">
-<td ><b>${ _(': ')}</b> </td>
+<td >${ _('object.cabezacuello or "________________________________________"')} </td>
 </table>
 
 <table class="basic_table206">
-<td ><b>${ _('O.R.L: ')}</b> </td>
+<td ><b>${ _('O.R.L: ')}</b> ${ _('object.orl or "________________________________________"')} </td>
 </table>
 
 <table class="basic_table207">
-		<td class="tdpeque4.5c2"><b>${ _('VISIÓN CERCANA: ')}</b>${object.papacondicion or "__" } </td>
-		<td class="tdpeque4.5c2"><b>${ _('LEJANA: ')}</b>${object.edad or "__" } </td>
-		<td class="tdpeque4.5c2"><b>${ _('DE COLORES: ')}</b>${object.edad or "__" } </td>
-		<td class="tdpeque4.5c2"><b>${ _('BORROSA: ')}</b>  ${object.edad or "__" } </td></table>
-
+		<td class="tdpeque4.5c2"><b>${ _('VISIÓN CERCANA: ')}</b>${object.visioncercana or "__" } </td>
+		<td class="tdpeque4.5c2"><b>${ _('LEJANA: ')}</b>${object.visionlejana or "__" } </td>
+		<td class="tdpeque4.5c2"><b>${ _('DE COLORES: ')}</b>${object.visiondecolore or "__" } </td>
+		<td class="tdpeque4.5c2"><b>${ _('BORROSA: ')}</b>  ${object.visionborro or "__" } </td></table>
+</table>
+		
+		
 <table class="basic_table208">
-<td ><b>${ _('USO DE LENTES DE CORRECCIÓN:')}</b> </td>
+<td ><b>${ _('USO DE LENTES DE CORRECCIÓN:')}</b> ${object.visionusalentes or "__" }</td>
 </table>
 
 <table class="basic_table209">
-<td ><b>${ _('TORAX:')}</b> </td>
+<td ><b>${ _('TORAX:')}</b> ${object.torax or "" }</td>
 </table>
 
 <table class="basic_table2010">
 <td ><b>${ _('Simetrico: RsCsRs 2T S/S Y MV en AsCspS S/A')}</b> </td>
+</table>				    
+				    
+<table class="basic_table2011">
+<td ><b>${ _(': ')}</b>${object.toraxsimetrico or "" } </td>
 </table>
 
-<table class="basic_table2011">
-<td ><b>${ _(': ')}</b> </td>
-</table>
 
 <table class="basic_table2012">
-<td ><b>${ _('ABDOMEN: ')}</b> </td>
+<td ><b>${ _('ABDOMEN: ')}</b> ${object.abdomen or "" }</td>
 </table>
 
 <table class="basic_table2013">
@@ -2031,83 +2043,77 @@
 </table>
 
 <table class="basic_table2015">
-<td ><b>${ _('HERNIAS UMBILICALES: ')}</b> </td>
+<td ><b>${ _('HERNIAS UMBILICALES: ')}</b>${object.herniasumbilicares  } </td>
 </table>
 <table class="basic_table2016">
-<td ><b>${ _('HERNIAS INGUINOESCROTALES: ')}</b> </td>
+<td ><b>${ _('HERNIAS INGUINOESCROTALES: ')}</b>${object.herniasinguinoescrotales  } </td>
 </table>
 <table class="basic_table2017">
 <td ><b>${ _(': ')}</b> </td>
 </table>
 <table class="basic_table2018">
-<td style="tdpeque6.5c"><b>${ _('COLUMNA: CERVICAL: ')}</b> ${object.edad  }</td>
-<td style="tdpeque5.5c"><b>${ _('TORAXICA: ')}</b> ${object.hermanoscondicion or 'SI' } </td>
-<td style="tdpeque6.5c"><b>${ _('LUMBOSACRA: ')}</b> ${object.edad  } </td>
+<td style="tdpeque6.5c"><b>${ _('COLUMNA: CERVICAL: ')}</b> ${object.columnacervical  }</td>
+<td style="tdpeque5.5c"><b>${ _('TORAXICA: ')}</b> ${object.columnatoraxica or 'SI' } </td>
+<td style="tdpeque6.5c"><b>${ _('LUMBOSACRA: ')}</b> ${object.columnalumbosacra  } </td>
 </table>
 <table class="basic_table2019">
 <td  ><b>${ _('MIEMBROS: ')}</b> </td>
 </table>
 <table class="basic_table2020">
-<td ><b>${ _('SUPERIORES: ')}</b> </td>
+<td ><b>${ _('SUPERIORES: ')}</b>${object.miembrossuperiores  } </td>
 </table>
 <table class="basic_table2021">
-<td ><b>${ _('INFERIORES: ')}</b> </td>
+<td ><b>${ _('INFERIORES: ')}</b>${object.miembrosinferiores  } </td>
 </table>
 <table class="basic_table2022">
-<td ><b>${ _('NEUROLOGICOS: ')}</b> </td>
+<td ><b>${ _('NEUROLOGICOS: ')}</b> ${object.neurologicos  }</td>
 </table>
 
-<table class="basic_table2023">
-<td ><b>${ _('Blando; depresible; no doloroso, ausencia de visceromegalia; ruidos hidroaereos; ')}</b> </td>
-</table>
-<table class="basic_table2022">
-<td ><b>${ _(': ')}</b> </td>
-</table>
 
 <table class="basic_table21">
 <td  ><b>${ _('RESULTADOS DE EXÁMENES COMPLEMENTARIOS ')}</b> </td>
 </table>
 <table class="basic_table211">
-<td class="tdpeque2" ><b>${ _('CARGO UE OCUPA: ')}</b>${(object.ocupacargo)}</b></td>
-<td class="tdpeque2" ><b>${ _('FECHA DE INGRESO:  ')}</b> ${(object.fechaegreso)}</td>
+<td class="tdpeque2" ><b>${ _('HEMATOLOGIA: ')}</b>${(object.hematologia)}</b></td>
+<td class="tdpeque2" ><b>${ _('EXUDADO FARINGEO:  ')}</b> ${(object.exudadofaringeo)}</td>
 </table>
 
 <table class="basic_table212">
-<td class="tdpeque2" ><b>${ _('CARGO UE OCUPA: ')}</b>${(object.ocupacargo)}</b></td>
-<td class="tdpeque2" ><b>${ _('FECHA DE INGRESO:  ')}</b> ${(object.fechaegreso)}</td>
+<td class="tdpeque2" ><b>${ _('GLISEMIA: ')}</b>${(object.glisemia)}</b></td>
+<td class="tdpeque2" ><b>${ _('ACIDO ÚRICO:  ')}</b> ${(object.acidourico)}</td>
 </table>
 
 <table class="basic_table213">
-<td class="tdpeque2" ><b>${ _('CARGO UE OCUPA: ')}</b>${(object.ocupacargo)}</b></td>
-<td class="tdpeque2" ><b>${ _('FECHA DE INGRESO:  ')}</b> ${(object.fechaegreso)}</td>
+<td class="tdpeque2" ><b>${ _('COLESTEROL: ')}</b>${(object.colesterol)}</b></td>
+<td class="tdpeque2" ><b>${ _('ORINA:  ')}</b> ${(object.orina)}</td>
 </table>
 
 
 <table class="basic_table214">
-<td class="tdpeque2" ><b>${ _('CARGO UE OCUPA: ')}</b>${(object.ocupacargo)}</b></td>
-<td class="tdpeque2" ><b>${ _('FECHA DE INGRESO:  ')}</b> ${(object.fechaegreso)}</td>
+<td class="tdpeque2" ><b>${ _('HDL: ')}</b>${(object.hdl)}</b></td>
+<td class="tdpeque2" ><b>${ _('ESPECIALES:  ')}</b> ${(object.especiales)}</td>
 </table>
 
 <table class="basic_table215">
-<td class="tdpeque2" ><b>${ _('CARGO UE OCUPA: ')}</b>${(object.ocupacargo)}</b></td>
-<td class="tdpeque2" ><b>${ _('FECHA DE INGRESO:  ')}</b> ${(object.fechaegreso)}</td>
+<td class="tdpeque2" ><b>${ _('LDL: ')}</b>${(object.ldl)}</b></td>
+<td class="tdpeque2" ><b>${ _('RNM COLUMNA LUMBROSACRA:  ')}</b> ${(object.rnmcolumnalumbosacra)}</td>
 </table>
 
 <table class="basic_table216">
-<td class="tdpeque2" ><b>${ _('CARGO UE OCUPA: ')}</b>${(object.ocupacargo)}</b></td>
-<td class="tdpeque2" ><b>${ _('FECHA DE INGRESO:  ')}</b> ${(object.fechaegreso)}</td>
+<td class="tdpeque2" ><b>${ _('TRIGLICÉRIDOS: ')}</b>${(object.trigliceridos)}</b></td>
+<td class="tdpeque2" ><b>${ _('AUDIOMETRIA:  ')}</b> ${(object.audiometria)}</td>
 </table>
 
 
 <table class="basic_table217">
-<td class="tdpeque2" ><b>${ _('CARGO UE OCUPA: ')}</b>${(object.ocupacargo)}</b></td>
-<td class="tdpeque2" ><b>${ _('FECHA DE INGRESO:  ')}</b> ${(object.fechaegreso)}</td>
+<td class="tdpeque2" ><b>${ _('HECES: ')}</b>${(object.heces)}</b></td>
+<td class="tdpeque2" ><b>${ _('ESPIROMETRÍA:  ')}</b> ${(object.espirometria)}</td>
 </table>
 
 
 <table class="basic_table218">
-<td class="tdpeque2" ><b>${ _('CARGO UE OCUPA: ')}</b>${(object.ocupacargo)}</b></td>
-<td class="tdpeque2" ><b>${ _('FECHA DE INGRESO:  ')}</b> ${(object.fechaegreso)}</td>
+<td class="tdpeque2" ><b>${ _('VDRL: ')}</b>${(object.vdrl)}</b></td>
+<td class="tdpeque2" ><b>${ _('HIV:  ')}</b> ${(object.hiv)}</td>
 </table>
 
 
