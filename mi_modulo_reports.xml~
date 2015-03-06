@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report auto="False" id="mi_modulo_report_mi_reporte2" model="mi_modulo.mi_tabla" name="mi_modulo.mi_reporte2" rml="mi_modulo/report/mi_reporte2.rml" string="Generar Reporte en PDF1111" />
+          
+<report auto="False" 
+ id="mi_modulo_report_mi_gran_reporte"
+ model="mi_modulo.mi_tabla"
+ name="mi_modulo.mi_gran_reporte"
+ file="mi_modulocopia/report/mi_gran_reporte5.mako"
+ string="Report Webkit"
+ report_type="webkit" /> 
+        </data>
+</openerp>
